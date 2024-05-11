@@ -25,6 +25,12 @@
           <div id="keyStuff">
             <div id="keyboard"></div>
             <br />
+            <label>Your keyboard style:</label>
+            <select id="style">
+              <option value="staggered" selected="">Staggered</option>
+              <option value="split">Ortho</option>
+            </select>
+            <br /> <br />
             <label>Your keyboard layout:</label>
             <select id="source">
               <option value="qwerty" selected="">QWERTY</option>
@@ -97,11 +103,19 @@
 
           <style type="text/css">
             #keyboard {
-              width: 39rem;
+              width: 40rem;
               position: relative;
               left: 0;
               height: 12rem;
               padding-bottom: 6px;
+            }
+
+            #keyboard .split0 {
+              position: relative;
+            }
+
+            #keyboard .split1 {
+              margin-left: 17rem;
             }
 
             #keyboard .row {
