@@ -220,15 +220,18 @@ changeStyleCss = function(style) {
 $('#keyboard').html(genKB(target));
 
 bind(source, target);
+changeStyleCss(style)
 
 $('#target').change(function() {
   target = eval($(this).val());
   $('#keyboard').html(genKB(target));
+  changeStyleCss(style);
   return bind(source, target);
 });
 
 $('#source').change(function() {
   source = eval($(this).val());
+  changeStyleCss(style);
   return bind(source, target);
 });
 
